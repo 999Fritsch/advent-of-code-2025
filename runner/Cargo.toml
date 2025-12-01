@@ -1,0 +1,11 @@
+[package]
+name = "runner"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+utils = { workspace = true }
+day01 = { path = "../day01" }
+# Add more days as they are created
+# day02 = { path = "../day02" }
+# day03 = { path = "../day03" }

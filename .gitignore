@@ -1,0 +1,21 @@
+# Rust build artifacts
+/target/
+**/target/
+Cargo.lock
+
+# Puzzle inputs (per AoC guidelines - don't share inputs)
+/inputs/*.txt
+# But keep the examples directory
+!/inputs/examples/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment files
+.env
+.env.local
