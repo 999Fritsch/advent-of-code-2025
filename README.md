@@ -63,15 +63,27 @@ This will:
 - Create `inputs/day05.txt` for your puzzle input
 - Add the day to the workspace members
 
-Then:
-1. Download your puzzle input to `inputs/day05.txt`
-2. Implement solutions in `day05/src/main.rs`
-3. Run with `cargo run -p day05`
+**With automatic input fetching** (recommended):
+```bash
+export AOC_SESSION=your_session_cookie
+./scripts/new_day.sh 5
+```
+
+When `AOC_SESSION` is set, the script will also:
+- Download your puzzle input automatically
+- Extract the first example from the puzzle page into the `EXAMPLE` constant
+
+To get your session cookie:
+1. Log in to [adventofcode.com](https://adventofcode.com)
+2. Open browser DevTools (F12) → Application → Cookies
+3. Copy the `session` cookie value
+
+Then just implement your solutions and run with `cargo run -p day05`!
 
 ## Development Workflow
 
-1. **Start a new day**: `./scripts/new_day.sh <day_number>`
-2. **Add example input**: Update the `EXAMPLE` constant in tests
+1. **Start a new day**: `./scripts/new_day.sh <day_number>` (with `AOC_SESSION` set for auto-fetching)
+2. **Verify example input**: Check the `EXAMPLE` constant (auto-populated if using `AOC_SESSION`)
 3. **Implement Part 1**: Write logic in `part1()` function
 4. **Test with example**: `cargo test -p day<XX>`
 5. **Run with real input**: `cargo run -p day<XX>`

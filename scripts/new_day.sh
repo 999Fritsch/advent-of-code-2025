@@ -113,11 +113,7 @@ itertools = { workspace = true }
 anyhow = { workspace = true }
 EOF
 
-<<<<<<< HEAD
-# Create main.rs
-=======
 # Create main.rs with example input
->>>>>>> c2fd853 (Initial commit: Advent of Code 2025 Rust workspace)
 cat > "$DAY_DIR/src/main.rs" <<EOF
 use utils::*;
 
@@ -142,11 +138,7 @@ fn main() {
 mod tests {
     use super::*;
 
-<<<<<<< HEAD
-    const EXAMPLE: &str = "example input here";
-=======
     const EXAMPLE: &str = "${EXAMPLE_INPUT}";
->>>>>>> c2fd853 (Initial commit: Advent of Code 2025 Rust workspace)
 
     #[test]
     fn test_part1_example() {
