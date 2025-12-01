@@ -3,43 +3,24 @@
 # Script to scaffold a new Advent of Code day
 # Usage: ./scripts/new_day.sh <day_number>
 # Example: ./scripts/new_day.sh 5
-<<<<<<< HEAD
-=======
 #
 # Environment variables:
 #   AOC_SESSION - Your Advent of Code session cookie (optional)
 #                 If set, automatically fetches puzzle input and example
->>>>>>> c2fd853 (Initial commit: Advent of Code 2025 Rust workspace)
 
 if [ -z "$1" ]; then
     echo "Usage: $0 <day_number>"
     echo "Example: $0 5"
-<<<<<<< HEAD
-=======
     echo ""
     echo "Set AOC_SESSION environment variable to auto-fetch inputs:"
     echo "  export AOC_SESSION=your_session_cookie"
     echo "  ./scripts/new_day.sh 5"
->>>>>>> c2fd853 (Initial commit: Advent of Code 2025 Rust workspace)
     exit 1
 fi
 
 DAY_NUM=$1
 DAY_PADDED=$(printf "%02d" $DAY_NUM)
 DAY_DIR="day${DAY_PADDED}"
-<<<<<<< HEAD
-
-# Check if day already exists
-if [ -d "$DAY_DIR" ]; then
-    echo "Error: $DAY_DIR already exists!"
-    exit 1
-fi
-
-echo "Creating $DAY_DIR..."
-
-# Create directory structure
-mkdir -p "$DAY_DIR/src"
-=======
 INPUT_FILE="inputs/day${DAY_PADDED}.txt"
 YEAR=2025
 
@@ -118,7 +99,6 @@ if [ "$DAY_EXISTS" = true ]; then
     echo "✓ Updated $INPUT_FILE"
     exit 0
 fi
->>>>>>> c2fd853 (Initial commit: Advent of Code 2025 Rust workspace)
 
 # Create Cargo.toml
 cat > "$DAY_DIR/Cargo.toml" <<EOF
@@ -194,30 +174,11 @@ mod tests {
 }
 EOF
 
-<<<<<<< HEAD
-# Create empty input file
-touch "inputs/day${DAY_PADDED}.txt"
-
-=======
->>>>>>> c2fd853 (Initial commit: Advent of Code 2025 Rust workspace)
 # Add to workspace Cargo.toml
 # Check if the day is already in the workspace members
 if ! grep -q "\"day${DAY_PADDED}\"" Cargo.toml; then
     # Find the line with the last day and add after it
     sed -i "/\"day[0-9][0-9]\",/a\\    \"day${DAY_PADDED}\"," Cargo.toml
-<<<<<<< HEAD
-    echo "Added day${DAY_PADDED} to workspace members"
-fi
-
-echo "✓ Created $DAY_DIR"
-echo "✓ Created inputs/day${DAY_PADDED}.txt"
-echo ""
-echo "Next steps:"
-echo "  1. Download your input to inputs/day${DAY_PADDED}.txt"
-echo "  2. Implement solutions in $DAY_DIR/src/main.rs"
-echo "  3. Run with: cargo run -p day${DAY_PADDED}"
-echo "  4. Test with: cargo test -p day${DAY_PADDED}"
-=======
     echo "✓ Added day${DAY_PADDED} to workspace members"
 fi
 
@@ -242,4 +203,3 @@ else
     echo "  2. Test with: cargo test -p day${DAY_PADDED}"
     echo "  3. Run with: cargo run -p day${DAY_PADDED}"
 fi
->>>>>>> c2fd853 (Initial commit: Advent of Code 2025 Rust workspace)

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// Runner for all Advent of Code 2026 solutions
-=======
 // Runner for all Advent of Code 2025 solutions
->>>>>>> c2fd853 (Initial commit: Advent of Code 2025 Rust workspace)
 //
 // Note: To use this runner, each day crate needs to expose its solutions
 // as a library. For now, this is a placeholder.
@@ -16,11 +12,7 @@ use std::fs;
 use std::time::Instant;
 
 fn main() {
-<<<<<<< HEAD
-    println!("Advent of Code 2026 - Solution Runner");
-=======
     println!("Advent of Code 2025 - Solution Runner");
->>>>>>> c2fd853 (Initial commit: Advent of Code 2025 Rust workspace)
     println!("=====================================\n");
 
     // Example of how to run all days when they expose library interfaces
