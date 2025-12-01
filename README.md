@@ -1,13 +1,13 @@
-# Advent of Code 2026 🎄
+# Advent of Code 2025 🎄
 
-My solutions for [Advent of Code 2026](https://adventofcode.com/2026) written in Rust.
+My solutions for [Advent of Code 2025](https://adventofcode.com/2025) written in Rust.
 
 ## Project Structure
 
 This project uses a Cargo workspace with separate binary crates for each day:
 
 ```
-advent-of-code-2026/
+advent-of-code-2025/
 ├── Cargo.toml          # Workspace configuration
 ├── utils/              # Shared utility library
 │   └── src/
